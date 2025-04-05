@@ -23,7 +23,7 @@
 ## Como usar
 
 1. Abra `index.html` na pasta `inicial/`
-2. Use o e-mail: `admin@auditools.com`
+2. Use o e-mail: `admin@acoditools.com`
 3. Use a senha: `123456`
 4. Será redirecionado para a `dashboard.html`
 
