@@ -56,8 +56,7 @@ Projeto_html
 ```
 
 ## Equipe
-
-Jhonata Rocha de Oliveira – Líder do projeto e testador
-Caio Felipe Almeida – Desenvolvedor
-Gabriel Henrique Caetano Sales – Desenvolvedor
-Sarah Sampaio Morente – Analista de Segurança
+- Jhonata Rocha de Oliveira – Líder do projeto e testador
+- Caio Felipe Almeida – Desenvolvedor
+- Gabriel Henrique Caetano Sales – Desenvolvedor
+- Sarah Sampaio Morente – Analista de Segurança
