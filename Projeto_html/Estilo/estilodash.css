@@ -1,0 +1,223 @@
+/* estilo_dashboard.css - Usando Flexbox dentro da Sidebar */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #1abc9c;
+    --text-color: #333;
+    --bg-color: #f9fafb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui;
+    background: var(--bg-color);
+    color: var(--text-color); /* Cor padrão */
+}
+
+.dashboard-container {
+    display: grid; /* Mantido - Ótimo para layout principal */
+    grid-template-columns: 280px 1fr; /* Coluna fixa para sidebar, restante flexível */
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background: var(--primary-color);
+    color: white;
+    overflow-y: auto;
+    padding: 1rem;
+    z-index: 1000; /* Garante que a sidebar fique acima do conteúdo */
+}
+
+/* Ajuste para o conteúdo principal não ficar embaixo da sidebar fixa */
+.main-content-wrapper {
+    grid-column: 2 / 3; /* Ocupa a segunda coluna do grid */
+    /* padding: 2rem; */ /* Movido para dentro do main-content se necessário */
+}
+
+
+.profile-section {
+    text-align: center;
+    padding: 1rem 0; /* Ajusta padding vertical */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem; /* Espaço após a seção do perfil */
+}
+
+.profile-container {
+    width: 100px; /* Reduzido um pouco */
+    height: 100px;
+    margin: 0 auto 0.5rem auto; /* Espaço abaixo da imagem */
+}
+
+.profile-pic {
+    width: 100%; /* Ajusta ao container */
+    height: 100%; /* Ajusta ao container */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.profile-name { /* Adicione uma classe para o nome se não tiver */
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.profile-role { /* Adicione uma classe para a função se não tiver */
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Navegação principal */
+.sidebar-nav {
+    flex-grow: 1; /* Faz a navegação ocupar o espaço disponível, empurrando itens abaixo */
+}
+
+.nav-link {
+    display: flex; /* Mantido - ótimo para alinhar ícone e texto */
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px; /* Adiciona borda arredondada suave */
+    transition: background-color 0.2s ease; /* Transição suave */
+}
+
+.nav-link:hover,
+.nav-link.active { /* Adiciona uma classe .active para o link atual */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link i { /* Estilo para ícones se estiver usando FontAwesome ou similar */
+    width: 20px; /* Largura fixa para alinhamento */
+    text-align: center;
+}
+
+/* Seção de Logout (Exemplo) - Colocada no final por causa do flex-grow na nav */
+.sidebar-footer {
+    margin-top: auto; /* Empurra para o final se a sidebar for flex */
+    padding-top: 1rem; /* Espaço acima */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 2rem;
+    /* O iframe já ocupa o espaço */
+}
+
+.iframe-container {
+    width: 100%;
+    height: calc(100vh - 20px); /* Ajusta a altura para ocupar a tela inteira menos margens */
+    border: none;
+    display: block;
+}
+
+/* Botão de logout ou similar (se estiver no footer da sidebar) */
+.btn-logout { /* Renomeado de .btn-login para clareza */
+    width: 100%; /* Ocupa toda a largura da sidebar-footer */
+    padding: 0.8rem;
+    background: var(--secondary-color); /* Cor diferente para destaque */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex; /* Usando flex para alinhar ícone e texto */
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    /* margin-top: 1rem; */ /* Removido, controle pelo sidebar-footer */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #e74c3c; /* Cor de "perigo" ou alternativa no hover */
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) { /* Ajuste para telas médias/tablets */
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Empilha sidebar e conteúdo */
+         /* Remove o grid para controle manual ou fluxo normal */
+         display: block;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar ocupa largura total */
+        height: auto; /* Altura automática */
+        position: static; /* Remove fixo/sticky */
+        overflow-y: visible; /* Remove scroll interno */
+        /* Poderia ter um botão "hamburger" para mostrar/esconder a sidebar em mobile */
+        flex-direction: row; /* Opcional: itens da sidebar em linha */
+        align-items: center; /* Opcional: alinha itens na linha */
+        flex-wrap: wrap; /* Opcional: permite quebra de linha */
+        padding: 0.5rem 1rem; /* Ajusta padding */
+    }
+
+     /* Esconde elementos não essenciais ou adapta layout da sidebar para mobile */
+     .profile-section {
+        /* display: none;  /* Exemplo: esconder perfil em mobile */
+        border-bottom: none;
+        margin-bottom: 0;
+        padding: 0.5rem;
+     }
+    .profile-container { width: 40px; height: 40px; margin: 0;}
+    .profile-pic { border-width: 2px;}
+    .profile-name, .profile-role { display: none; } /* Esconde nome/função */
+
+     .sidebar-nav {
+        flex-grow: 0; /* Remove o crescimento */
+        display: flex; /* Coloca links lado a lado */
+        flex-wrap: wrap; /* Permite quebra de linha */
+        gap: 0.5rem; /* Espaçamento entre links */
+     }
+
+     .nav-link {
+         padding: 8px 10px; /* Menor padding */
+         gap: 5px;
+     }
+
+     .sidebar-footer {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        margin-left: auto; /* Empurra o footer (logout) para a direita */
+     }
+     .btn-logout { width: auto; padding: 0.5rem 1rem; }
+
+     .main-content-wrapper {
+        margin-left: 280px; /* Garante que o conteúdo principal não fique embaixo da sidebar */
+        padding: 20px; /* Adiciona espaçamento interno */
+        background-color: var(--bg-color); /* Fundo para o conteúdo principal */
+        min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    }
+
+    .main-content {
+        padding: 1rem; /* Menor padding no conteúdo principal */
+    }
+    /* Iframe pode precisar de ajuste de altura se a viewport for pequena */
+    .iframe-container {
+        /* min-height: 300px; */ /* Exemplo de altura mínima */
+         height: calc(100vh - 100px); /* Ajustar altura baseado na nova altura da 'header/sidebar' */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionais para telas muito pequenas, se necessário */
+    .sidebar-nav {
+        justify-content: center; /* Centraliza os links da nav */
+    }
+}

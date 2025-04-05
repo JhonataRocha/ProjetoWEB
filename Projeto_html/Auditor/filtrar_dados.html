@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Dados - ACodITools</title>
+    <link rel="stylesheet" href="../Estilo/estiloconteud.css">
+</head>
+<body>
+    <div class="content-section">
+        <header class="section-header">
+            <i class="fas fa-filter fa-2x"></i>
+            <h3>Filtrar Dados</h3>
+        </header>
+
+        <section class="form-container">
+            <h4><i class="fas fa-search"></i> Configurar Filtros</h4>
+            <p> Refine os dados exibidos com base nos critérios abaixo.</p>
+            <form id="filterForm">
+                <div class="form-group">
+                    <label for="dataInicio">Data Início:</label>
+                    <input type="date" id="dataInicio" name="dataInicio" value="2025-04-01">
+                </div>
+                <div class="form-group">
+                    <label for="dataFim">Data Fim:</label>
+                    <input type="date" id="dataFim" name="dataFim" value="2025-04-30">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="">Todos</option>
+                        <option value="conforme">Conforme</option>
+                        <option value="nao-conforme">Não Conforme</option>
+                        <option value="pendente">Pendente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">Todas</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="operacional">Operacional</option>
+                        <option value="seguranca">Segurança</option>
+                        <option value="conformidade">Conformidade</option>
+                    </select>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="btn-submeter"><i class="fas fa-check"></i> Aplicar Filtros</button>
+                    <button type="reset" class="btn-cancelar"><i class="fas fa-undo"></i> Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="resultados mt-2">
+            <h4><i class="fas fa-table"></i> Resultados Atualizados</h4>
+            <table class="audit-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>01/04/2025</td>
+                        <td>Segurança</td>
+                        <td><span class="status-badge status-conforme">Conforme</span></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>02/04/2025</td>
+                        <td>Operacional</td>
+                        <td><span class="status-badge status-pendente">Pendente</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="result-note"><i class="fas fa-info-circle"></i> Resultados simulados com base nos filtros aplicados.</p>
+        </section>
+    </div>
+</body>
+</html>
