@@ -1,62 +1,52 @@
 # ACoditools
 
-**ACoditools** é uma aplicação web desenvolvida como projeto acadêmico no curso de Segurança da Informação da FATEC São Caetano do Sul. O sistema tem como objetivo auxiliar pequenas empresas na realização de autoauditorias com base nos requisitos da norma ISO/IEC 27001, promovendo a conformidade e fortalecendo a segurança da informação.
+**ACoditools** é um sistema web acadêmico desenvolvido para fins de auditoria e conformidade. O projeto é responsivo e projetado para funcionar em múltiplas plataformas, com uso de HTML, CSS, JavaScript e arquitetura modular.
 
 ## Funcionalidades
-- Login com validação DOM (JavaScript) 
-- Redirecionamento condicional para dashboard
-- Cadastro de empresas e usuários
-- Questionário de autoavaliação de conformidade
-- Sugestão de controles com base na ISO 27001
-- Geração de relatórios de conformidade
-- Registro e submissão de auditorias
-- Filtros por data, status e categoria
-- Exportação de relatórios em PDF/CSV
-- Suporte via formulário de contato
-- Interface moderna e responsiva
 
-## Tecnologias Utilizadas
-- HTML5, CSS3 (Flexbox e Grid)
-- JavaScript (DOM e lógica de autenticação)
-- Layout responsivo e modular
-
-## Como usar
-
-1. Abra `index.html` na pasta `inicial/`
-2. Use o e-mail: `admin@acoditools.com`
-3. Use a senha: `123456`
-4. Será redirecionado para a `dashboard.html`
+- Tela de login com validação de formulário
+- Dashboard interativa com gráfico de conformidade animado (Chart.js)
+- Análise de risco com barra de níveis dinâmica
+- Filtro dinâmico em tempo real por descrição/categoria
+- Exportação de dados
+- Registro de achados e submissão de auditorias
+- Layout responsivo com Flexbox e CSS Grid
 
 ## Estrutura de Pastas
 
 ```
-Projeto_html
-├── Auditor
-│   ├── ajuda_suporte.html
-│   ├── config_perfil.html
-│   ├── conteudodash.html
-│   ├── dashboard.html
-│   ├── exportar_dados.html
-│   ├── filtrar_dados.html
-│   ├── minhas_auditorias.html
-│   ├── registrar_achado.html
-│   └── submeter_audit.html
-├── Estilo
-│   ├── estilo.css
-│   ├── estiloconteud.css
-│   └── estilodash.css
-├── JS
-│   └── index.js
-├── inicial
-│   ├── index.html
-│   └── solicitaaces.html
-├── default_profile.png
-├── .gitignore
-└── README.md
+Projeto_html/
+├── Auditor/            # Páginas de auditoria e dashboard
+├── Estilo/             # Estilos CSS separados por tipo
+├── JS/                 # Scripts JavaScript
+├── Upload/             # Arquivos enviados (perfis, evidências)
+├── inicial/            # Páginas de login e solicitação de acesso
+├── README.md           # Documentação
+└── .gitignore
 ```
 
-## Equipe
-- Jhonata Rocha de Oliveira – Líder do projeto e testador
-- Caio Felipe Almeida – Desenvolvedor
-- Gabriel Henrique Caetano Sales – Desenvolvedor
-- Sarah Sampaio Morente – Analista de Segurança
+## Como usar
+
+1. Execute o projeto em um servidor local (ex: Live Server ou Python HTTP Server)
+2. Acesse via navegador: `http://localhost:8000/inicial/index.html`
+3. Login de teste:
+   - E-mail: `admin@acoditools.com`
+   - Senha: `123456`
+
+## Tecnologias
+
+- HTML5 + CSS3 (Flexbox e Grid)
+- JavaScript puro (DOM)
+- Chart.js para gráficos
+- Estrutura preparada para integração com backend
+
+## Autores
+
+- CAIO FELIPE ALMEIDA
+- GABRIEL HENRIQUE CAETANO SALES
+- JHONATA DA ROCHA DE OLIVEIRA
+- SARAH SAMPAIO MORENTE
+
+---
+
+Projeto acadêmico com fins educacionais.

@@ -13,7 +13,7 @@ loginForm.addEventListener("submit", function (event) {
     const senhaDigitada = document.getElementById("senha").value;
 
     if (emailDigitado === loginCorreto.email && senhaDigitada === loginCorreto.senha) {
-        window.location.href = "../Auditor/dashboard.html";
+        window.location.href = "../Auditor/inicio_dashboard.html";
     } else {
         mensagemErro.style.display = "block";
     }

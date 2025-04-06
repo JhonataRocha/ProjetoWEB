@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACodITools - Painel Auditor</title>
+    <link rel="stylesheet" href="../Estilo/estilodash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-container">
+                    <img src="../Upload/perfis/default_profile.png" alt="Foto de Perfil" class="profile-pic">
+                </div>
+                <div class="profile-name">Nome do Usuário</div>
+                <div class="profile-role">Auditor</div>
+                <form style="margin-top: 0.5rem;">
+                    <label class="btn-login"> <i class="fas fa-camera"></i> Alterar Foto
+                        <input type="file" name="foto" hidden>
+                    </label>
+                </form>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="minhas_auditorias.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-tasks"></i> <span>Minhas Auditorias</span> </a>
+                <a href="registrar_achado.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-plus-circle"></i> <span>Registrar Achado</span>
+                </a>
+                <a href="submeter_audit.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-check-circle"></i> <span>Submeter Auditoria</span>
+                </a>
+                <a href="filtrar_dados.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-filter"></i> <span>Filtrar Dados</span>
+                </a>
+                <a href="exportar_dados.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-download"></i> <span>Exportar Dados</span>
+                </a>
+                <a href="ajuda_suporte.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-question-circle"></i> <span>Ajuda/Suporte</span>
+                </a>
+                <a href="dashboard_conteudo.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-sync"></i> <span>Dashboard</span>
+                </a>
+                <a href="config_perfil.html" target="content-frame" class="nav-link">
+                    <i class="fas fa-cog"></i> <span>Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="../inicial/index.html" class="btn-logout"> <i class="fas fa-sign-out-alt"></i> <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-content-wrapper">
+            <main class="main-content">
+                <iframe src="dashboard_conteudo.html" name="content-frame" class="iframe-container"></iframe>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
