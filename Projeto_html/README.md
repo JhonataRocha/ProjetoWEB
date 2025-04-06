@@ -40,12 +40,12 @@ Projeto_html/
 - Chart.js para gráficos
 - Estrutura preparada para integração com backend
 
-## Autores
+## Equipe
 
-- CAIO FELIPE ALMEIDA
-- GABRIEL HENRIQUE CAETANO SALES
-- JHONATA DA ROCHA DE OLIVEIRA
-- SARAH SAMPAIO MORENTE
+- Jhonata Rocha de Oliveira – Líder do projeto e testador
+- Caio Felipe Almeida – Desenvolvedor
+- Gabriel Henrique Caetano Sales – Desenvolvedor
+- Sarah Sampaio Morente – Analista de Segurança
 
 ---
 
