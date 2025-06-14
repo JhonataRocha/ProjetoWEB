@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - ACodITools</title>
+    <link rel="stylesheet" href="../Estilo/estiloconteud.css">
+</head>
+<body>
+    <div class="content-section">
+        <!-- Cabeçalho da Página -->
+        <header class="section-header">
+            <i class="fas fa-cog fa-2x"></i>
+            <h3>Configurações</h3>
+        </header>
+
+        <!-- Seção de Perfil -->
+        <section class="form-container">
+            <h4><i class="fas fa-user-circle"></i> Perfil do Usuário</h4>
+            <p>Atualize suas informações pessoais e preferências.</p>
+            
+            <form id="configForm">
+                <!-- Foto de Perfil -->
+                <div class="profile-container">
+                    <div class="profile-pic-wrapper">
+                        <img src="../Upload/perfis/default_profile.png" alt="Foto de Perfil" class="profile-pic">
+                        <label class="btn-photo">
+                            <i class="fas fa-camera"></i> Alterar Foto
+                            <input type="file" name="foto" accept="image/*" hidden>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campos do Formulário -->
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" value="João Silva" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" value="joao.silva@acoditools.com" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="form-group password-group">
+                    <label for="senha">Senha Atual:</label>
+                    <input type="password" id="senha" name="senha" value="********" disabled>
+                    <a href="#" class="btn-edit"><i class="fas fa-lock"></i> Alterar Senha</a>
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo">Cargo:</label>
+                    <select id="cargo" name="cargo">
+                        <option value="auditor" selected>Auditor</option>
+                        <option value="admin">Administrador</option>
+                        <option value="supervisor">Supervisor</option>
+                    </select>
+                </div>
+
+                <!-- Preferências Adicionais -->
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="notificacoes" checked>
+                        Receber notificações por e-mail
+                    </label>
+                    <p class="form-note">Receba alertas sobre auditorias pendentes e atualizações.</p>
+                </div>
+
+                <!-- Botões -->
+                <div class="botoes">
+                    <button type="submit" class="btn-submeter"><i class="fas fa-save"></i> Salvar Alterações</button>
+                    <a href="inicio_dashboard.html" class="btn-cancelar"><i class="fas fa-times"></i> Cancelar</a>
+                </div>
+            </form>
+
+            <!-- Nota Informativa -->
+            <p class="form-note mt-2 text-center">
+                <i class="fas fa-info-circle"></i> Suas alterações serão aplicadas após salvar.
+            </p>
+        </section>
+    </div>
+</body>
+</html>

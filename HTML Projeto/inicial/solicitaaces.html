@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudiTools - Solicitação de Acesso</title>
+    <link rel="stylesheet" href="/Estilo/estilo.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <i class="fas fa-user-plus"></i>
+            <h1>Solicitação de Acesso - AudiTools</h1>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nome_completo">Nome Completo</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="empresa_id">Empresa</label>
+                <select id="empresa_id" name="empresa_id" required>
+                    <option value="">Selecione a empresa</option>
+                    <!-- Exemplo estático, já que o PHP foi removido -->
+                    <option value="1">Empresa A</option>
+                    <option value="2">Empresa B</option>
+                    <option value="3">Empresa C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivo">Motivo do Cadastro</label>
+                <textarea id="motivo" name="motivo" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-login">Enviar Solicitação</button>
+            <p class="text-center mt-2">
+                Já tem conta? 
+                <a href="index.html" class="link-cadastro">Faça login</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

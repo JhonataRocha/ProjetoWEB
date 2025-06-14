@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda / Suporte - AudiTools</title>
+    <link rel="stylesheet" href="../Estilo/estiloconteud.css">
+</head>
+<body>
+    <div class="content-section">
+        <header class="section-header">
+            <i class="fas fa-question-circle fa-2x"></i>
+            <h3>Ajuda / Suporte</h3>
+        </header>
+
+        <!-- Seção de FAQ -->
+        <section class="faq-section">
+            <h4><i class="fas fa-book"></i> Perguntas Frequentes</h4>
+            <ul class="faq-list">
+                <li>
+                    <strong>Como cadastrar uma auditoria?</strong>
+                    <p>Acesse "Submeter Auditoria" no menu lateral, preencha os dados solicitados e confirme.</p>
+                </li>
+                <li>
+                    <strong>Como gerenciar achados?</strong>
+                    <p>Vá para "Registrar Achado" no menu, adicione os detalhes e associe à auditoria correspondente.</p>
+                </li>
+                <li>
+                    <strong>Como exportar relatórios?</strong>
+                    <p>Em "Exportar Dados", selecione o formato desejado e clique em "Gerar Relatório".</p>
+                </li>
+                <li>
+                    <strong>Como aplicar filtros em auditorias?</strong>
+                    <p>Use "Filtrar Dados" para definir critérios como data, status ou categoria.</p>
+                </li>
+                <li>
+                    <strong>Como visualizar gráficos de conformidade?</strong>
+                    <p>Os gráficos estão disponíveis na página inicial do Dashboard, na seção "Conformidade Geral".</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="form-container">
+            <h4><i class="fas fa-envelope"></i> Contato com o Suporte</h4>
+            <p>Envie sua dúvida ou solicitação diretamente ao time de suporte.</p>
+            <form id="suporteForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua dúvida ou problema..." required></textarea>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="btn-submeter"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    <a href="inicio_dashboard.html" class="btn-cancelar">Voltar</a>
+                </div>
+            </form>
+            <p class="support-note">Ou envie um e-mail diretamente para <a href="mailto:suporte@acoditools.com">suporte@acoditools.com</a>.</p>
+        </section>
+    </div>
+</body>
+</html>

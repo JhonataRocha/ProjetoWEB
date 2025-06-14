@@ -1,0 +1,113 @@
+/* estilo_index.css - Mantido como está, pois o Flexbox já está bem aplicado para centralização */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #1abc9c;
+    --text-color: #333;
+    --bg-color: #f9fafb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui;
+    /* Flexbox para centralizar o container de login */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    min-height: 100vh;      /* Garante que o body ocupe toda a altura da tela */
+    background: var(--bg-color);
+    padding: 1rem; /* Adiciona um padding para evitar que o container toque as bordas em telas pequenas */
+}
+
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Adiciona transição suave */
+}
+
+.btn-login:hover {
+    background: var(--secondary-color);
+}
+
+.link-cadastro {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.link-cadastro:hover {
+    text-decoration: underline; /* Melhora a indicação de link */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 1rem; /* Ajustado para consistência, assumindo que '2' significa 1rem */
+}
+
+/* A media query existente é boa para ajustar o padding em telas menores */
+@media (max-width: 480px) {
+    .login-container {
+        /* margin: 1rem; */ /* Removido pois o padding no body já faz isso */
+        padding: 1.5rem;
+    }
+}

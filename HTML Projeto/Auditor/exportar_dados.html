@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportar Dados - ACodITools</title>
+    <link rel="stylesheet" href="../Estilo/estiloconteud.css">
+</head>
+<body>
+    <div class="content-section">
+        <header class="section-header">
+            <i class="fas fa-download fa-2x"></i>
+            <h3>Exportar Dados</h3>
+        </header>
+
+        <section class="form-container">
+            <h4><i class="fas fa-file-export"></i> Configurar Exportação</h4>
+            <p>Escolha os parâmetros para gerar seu relatório personalizado.</p>
+            <form id="exportForm">
+                <div class="form-group">
+                    <label for="dataInicio">Data Início:</label>
+                    <input type="date" id="dataInicio" name="dataInicio" value="2025-04-01">
+                </div>
+                <div class="form-group">
+                    <label for="dataFim">Data Fim:</label>
+                    <input type="date" id="dataFim" name="dataFim" value="2025-04-30">
+                </div>
+                <div class="form-group">
+                    <label for="tipoRelatorio">Tipo de Relatório:</label>
+                    <select id="tipoRelatorio" name="tipoRelatorio">
+                        <option value="pdf" selected>PDF - Documento Visual</option>
+                        <option value="csv">CSV - Dados Brutos</option>
+                        <option value="xlsx">Excel - Planilha Formatada</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="selecionarAuditorias" name="selecionarAuditorias" checked>
+                        Incluir apenas auditorias selecionadas
+                    </label>
+                    <p class="form-note">Marque para exportar apenas auditorias específicas.</p>
+                </div>
+                <div class="botoes">
+                    <button type="submit" class="btn-submeter"><i class="fas fa-file-download"></i> Gerar Arquivo</button>
+                    <a href="inicio_dashboard.html" class="btn-cancelar"><i class="fas fa-times"></i> Cancelar</a>
+                </div>
+            </form>
+            <div class="export-preview mt-2">
+                <h5>Pré-visualização do Relatório</h5>
+                <p><i class="fas fa-info-circle"></i> O arquivo será gerado com base nos filtros acima.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
